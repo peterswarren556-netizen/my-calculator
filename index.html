@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Warren Calculator</title>
+  <meta name="description" content="Warren Calculator: a scientific calculator built with HTML, CSS and JavaScript.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Familjen+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stage">
+    <section class="calc" aria-label="Warren scientific calculator">
+      <header class="brand">
+        <h1>Warren</h1>
+        <span>scientific calculator</span>
+      </header>
+
+      <div class="lcd">
+        <div class="flags"><span id="mode">DEG</span><span id="mem" hidden>M</span></div>
+        <div id="prev" class="prev"></div>
+        <div id="expr" class="expr" role="status" aria-live="polite">0</div>
+      </div>
+
+      <div id="fn" class="grid five" aria-label="Scientific functions"></div>
+      <div id="pad" class="grid four" aria-label="Number pad"></div>
+    </section>
+
+    <aside class="history" aria-label="History">
+      <div class="history-head">
+        <h2>History</h2>
+        <button id="clearHistory" type="button">Clear</button>
+      </div>
+      <ul id="history"></ul>
+      <p id="empty">Finished calculations appear here. Select one to reuse its result.</p>
+    </aside>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
